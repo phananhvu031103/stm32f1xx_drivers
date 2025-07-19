@@ -1,0 +1,15 @@
+--cpu Cortex-M3
+".\objects\100rtc_lcd.o"
+".\objects\stm32f103xx_gpio_driver_1.o"
+".\objects\stm32f103xx_spi_driver.o"
+".\objects\stm32f103xx_i2c_driver.o"
+".\objects\stm32f103xx_usart_driver.o"
+".\objects\stm32f103xx_rcc_driver.o"
+".\objects\ds1307.o"
+".\objects\lcd_1.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\stm32f1xx_drivers.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\stm32f1xx_drivers.map" -o .\Objects\stm32f1xx_drivers.axf
